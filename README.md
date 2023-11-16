@@ -1,40 +1,27 @@
-# Kanban Board React App
-A simple Kanban board React application with drag-and-drop functionality using the @dnd-kit library.
+# React + TypeScript + Vite
 
-# Table of Contents
-Introduction
-Features
-Getting Started
-Usage
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
- 
-# Introduction
-This React application implements a Kanban board, a project management tool that allows users to visualize tasks across different stages of a workflow. It provides an intuitive interface for managing tasks within columns, supporting drag-and-drop operations.
+Currently, two official plugins are available:
 
-# Features
-Column Management:
-Add, delete, and update columns dynamically.
-Task Management:
-Create, delete, and update tasks within columns.
-Drag-and-Drop:
-Utilizes the @dnd-kit library for smooth drag-and-drop functionality.
- 
-# Getting Started
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Usage
-Add Columns:
+## Expanding the ESLint configuration
 
-Click "Add Column" to create new columns.
-Manage Tasks:
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-Click "Add Task" within a column to create a new task.
-Click on a task to edit its content.
-Drag tasks between columns to change their status.
-Column Actions:
+- Configure the top-level `parserOptions` property like this:
 
-Click the column title to edit it.
-Click the trash icon to delete a column.
-Contributing
-Contributions are welcome! Feel free to open issues or submit pull requests.
+```js
+   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+   },
+```
 
- 
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
